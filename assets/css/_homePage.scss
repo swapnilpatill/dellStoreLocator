@@ -1,0 +1,389 @@
+.mainBanner {
+  padding: 50px 16px 0;
+  background: url(../img/bannerBgImg.png) no-repeat center center;
+  background-size: cover;
+
+  position: relative;
+  &.innerPage {
+    padding: 13px 16px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(262.84deg, #662980 14.11%, #03437a 87.33%);
+    mix-blend-mode: normal;
+    opacity: 0.3;
+  }
+  .container {
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    justify-content: center;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 49px;
+    margin-bottom: 5px;
+    @media (max-width: 700px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @media (max-width: 700px) {
+    background: transparent;
+    padding: 0;
+    &:after {
+      display: none;
+    }
+    &.innerPage {
+      background: url(../img/bannerBgImg.png) no-repeat center center;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(262.84deg, #662980 14.11%, #03437a 87.33%);
+        mix-blend-mode: normal;
+        opacity: 0.3;
+        display: block;
+      }
+    }
+    .mbTopbanner {
+      padding: 20px;
+      background: url(../img/bannerBgImg.png) no-repeat center center;
+      background-size: cover;
+      position: relative;
+      > * {
+        position: relative;
+        z-index: 1;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(262.84deg, #662980 14.11%, #03437a 87.33%);
+        mix-blend-mode: normal;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+.searchWrap {
+  width: 100%;
+  max-width: 727px;
+  margin: 0 auto;
+  padding: 28px 0 32px;
+
+  .searchInfo {
+    display: flex;
+    padding-left: 30px;
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    padding-top: 0;
+    margin-top: 20px;
+    position: relative;
+  }
+}
+.locateMeBtn {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: underline;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 26px;
+  cursor: pointer;
+  &:before {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    content: "";
+    background: url(../img/locateIcon.svg) no-repeat;
+    margin-right: 5px;
+  }
+  @media (max-width: 700px) {
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    color: #808080;
+    font-size: 14px;
+    z-index: 1;
+    margin: 0;
+    &:before {
+      background: url(../img/locateIconGray.svg) no-repeat;
+    }
+  }
+}
+.mainSearchWrapper {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+  &:after {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    content: "";
+    background: url(../img/pinSearch.png);
+    @media (max-width: 700px) {
+      top: 9px;
+    }
+  }
+  input {
+    width: 100%;
+    background: #fff;
+    border: 0;
+    box-shadow: 0px 21px 24px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    height: 55px;
+    padding: 5px 250px 5px 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    @media (max-width: 768px) {
+      padding: 5px 5px 5px 50px;
+      height: 50px;
+    }
+    @media (max-width: 700px) {
+      font-size: 14px;
+      padding-right: 100px;
+    }
+  }
+  .searchBtnwrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 6px;
+
+    a + a {
+      margin-left: 6px;
+    }
+    @media (max-width: 768px) {
+      position: relative;
+      width: 100%;
+      justify-content: center;
+      margin-top: 15px;
+    }
+  }
+  @media (max-width: 700px) {
+    margin-top: 0;
+  }
+}
+.popularCity {
+  text-align: center;
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+  }
+  .plList {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+
+    @media (max-width: 700px) {
+      justify-content: left;
+      padding-bottom: 10px;
+    }
+    li {
+      display: inline-flex;
+      padding: 0 15px;
+      @media (max-width: 700px) {
+        padding: 0 5px;
+        width: 105px;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-flex;
+        flex-direction: column;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+      i {
+        width: 94px;
+        height: 65px;
+        margin-bottom: 9px;
+        &.mumbai {
+          background: url(../img/mumbai.png) no-repeat center bottom;
+          background-size: contain;
+        }
+        &.delhi {
+          background: url(../img/delhi.png) no-repeat center bottom;
+          background-size: contain;
+        }
+        &.banglore {
+          background: url(../img/banglore.png) no-repeat center bottom;
+          background-size: contain;
+        }
+        &.Hyderabad {
+          background: url(../img/Hyderabad.png) no-repeat center bottom;
+          background-size: contain;
+        }
+        &.Chennai {
+          background: url(../img/Chennai.png) no-repeat center bottom;
+          background-size: contain;
+        }
+        &.Kolkata {
+          background: url(../img/Kolkata.png) no-repeat center bottom;
+          background-size: contain;
+        }
+        @media (max-width: 700px) {
+          opacity: 0.7;
+          &.mumbai {
+            background: url(../img/mumbaiBlack.png) no-repeat center bottom;
+          }
+          &.delhi {
+            background: url(../img/delhiBlack.png) no-repeat center bottom;
+          }
+          &.banglore {
+            background: url(../img/bangloreBlack.png) no-repeat center bottom;
+          }
+          &.Hyderabad {
+            background: url(../img/HyderabadBlack.png) no-repeat center bottom;
+          }
+          &.Chennai {
+            background: url(../img/ChennaiBlack.png) no-repeat center bottom;
+          }
+          &.Kolkata {
+            background: url(../img/KolkataBlack.png) no-repeat center bottom;
+          }
+        }
+      }
+      strong {
+        width: 100%;
+        display: block;
+        @media (max-width: 700px) {
+          color: #000;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+.productOffer {
+  padding-top: 36px;
+  @media (max-width: 700px) {
+    .container {
+      flex-wrap: wrap;
+    }
+  }
+  .poBox {
+    width: 50%;
+    padding-right: 9px;
+    & + .poBox {
+      padding-left: 9px;
+      padding-right: 0;
+    }
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 0px 0 30px 0 !important;
+      .newProduct {
+        padding-bottom: 25px;
+      }
+    }
+  }
+}
+.poInnerBox {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+  height: 306px;
+  @media (max-width: 1024px) {
+    flex-flow: unset;
+    align-content: unset;
+    height: auto;
+  }
+  .potwoBox {
+    width: 49%;
+  }
+  .poCardwrap {
+    width: 49%;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    @media (max-width: 1024px) {
+      width: 296px;
+      img {
+        height: 296px;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    &:last-child {
+      margin-top: 1.4vw;
+      @media (max-width: 1024px) {
+        margin-top: 0px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    span {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 135px;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      padding: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      &:after {
+        position: absolute;
+        top: -7px;
+        right: -5px;
+        width: 17px;
+        height: calc(100% + 10px);
+        border: solid 2px #fff;
+        border-left: 0;
+        content: "";
+      }
+      &:before {
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        width: 17px;
+        height: calc(100% + 10px);
+        border: solid 2px #fff;
+        border-right: 0;
+        content: "";
+      }
+    }
+  }
+}
