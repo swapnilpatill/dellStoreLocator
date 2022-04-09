@@ -22,7 +22,7 @@
   }
 }
 .banLocation {
-  background: linear-gradient(262.84deg, #f2af00 14.11%, #03437a 87.33%);
+  background: #fff;
   line-height: 39px;
   font-weight: 800;
   font-size: 20px;
@@ -30,6 +30,14 @@
   border-radius: 5px;
   display: inline-flex;
   align-items: center;
+  span {
+    background: linear-gradient(262.84deg, #b82d35 14.11%, #03437a 87.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
   &::before {
     content: "";
     width: 20px;
@@ -240,8 +248,34 @@
 }
 .grList {
   display: flex;
-  width: 100%;
+  width: calc(100% + 30px);
+  margin: 0 -15px;
   justify-content: space-between;
+  .slick-prev {
+    left: -20px;
+    @media (max-width: 500px) {
+      left: -10px;
+    }
+  }
+  .slick-next {
+    right: -20px;
+    @media (max-width: 500px) {
+      right: -10px;
+    }
+  }
+  .slick-track {
+    display: flex !important;
+    .slick-slide {
+      height: inherit;
+      padding: 0 15px;
+      > div {
+        height: 100%;
+        .grItem {
+          height: inherit;
+        }
+      }
+    }
+  }
   .grItem {
     display: inline-flex;
     width: 24%;
@@ -255,6 +289,9 @@
       width: 100%;
       justify-content: space-between;
       margin-bottom: 20px;
+      .starRating {
+        align-self: flex-end;
+      }
       strong {
         background: #6ea204;
         border-radius: 5px;
@@ -299,20 +336,46 @@
   padding: 32px 26px;
   background: #ebf9fc;
   border-radius: 5px;
+  margin-top: 40px;
   border-bottom: solid 5px #662a80;
+  position: relative;
   @media (max-width: 700px) {
     padding-bottom: 0;
   }
 }
+.crossBtn {
+  background: url(../img/crossbtn.svg) no-repeat center center;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.thankYoumsg {
+  text-align: center;
+  padding: 30px 0;
+  h3 {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 70px;
+    background: linear-gradient(262.84deg, #b82d35 14.11%, #03437a 87.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
 .efListwrap {
   width: 100%;
-  margin-top: 42px;
+  margin-top: 15px;
   display: flex;
   li {
     width: calc(33.33% - 55px);
     padding-right: 15px;
     &:last-child {
       width: 153px;
+      display: flex;
+      align-items: flex-end;
       @media (max-width: 700px) {
         width: 100%;
         justify-content: center;
@@ -329,9 +392,6 @@
       display: block;
       width: 100%;
       label {
-        position: absolute;
-        bottom: 100%;
-        left: 22px;
         padding: 0 11px;
         line-height: 27px;
         background: #ebf9fc;
@@ -387,6 +447,7 @@
       }
       h3 {
         font-size: 24px;
+        line-height: 30px;
         margin-top: 30px;
       }
     }
@@ -449,6 +510,21 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    line-height: 0;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      opacity: 0.7;
+      background: linear-gradient(
+        0deg,
+        #000000 30.73%,
+        rgba(196, 196, 196, 0) 100%
+      );
+      left: 0;
+      bottom: 0;
+    }
     img {
       width: 100%;
       height: 241px;
@@ -464,6 +540,7 @@
       font-size: 28px;
       line-height: 30px;
       max-width: 300px;
+      z-index: 1;
     }
   }
   @media (max-width: 768px) {
@@ -580,7 +657,7 @@ ul.faqAccordion {
 .mobileSlider {
   display: none;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .mobileSlider {
     display: block;
   }
@@ -597,7 +674,7 @@ ul.faqAccordion {
     line-height: 23px;
     margin: 12px 0;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -631,5 +708,14 @@ ul.faqAccordion {
       border-radius: 5px;
       overflow: hidden;
     }
+  }
+}
+
+.faqWrap {
+  padding-top: 50px;
+}
+.storePhotosMobile {
+  .slick-slide {
+    padding: 10px;
   }
 }

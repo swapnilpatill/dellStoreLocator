@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
     <link
       type="text/css"
       rel="stylesheet"
@@ -84,7 +85,9 @@
         <div class="detailPageHead">
           <h1>Dell Exclusive Store</h1>
           <div class="wrapLocationRating">
-            <span class="banLocation">Lamington Road</span>
+            <span class="banLocation">
+              <span>Lamington Road</span>
+            </span>
             <div class="rating">
               <div class="ratingbox">
                 <img src="./assets/img/dummyStar.png" alt="" />
@@ -110,26 +113,23 @@
                   mall, LBS Marg, Kurla - West, Mumbai
                 </p>
               </div>
-              <div class="swiper mobileSlider">
-                <div class="swiper-container storePhotosMobile">
-                  <div class="swiper-wrapper">
-                    <div class="spmItems swiper-slide">
-                      <img src="./assets/img/photo1.jpg" alt="store Photo" />
-                    </div>
-                    <div class="spmItems swiper-slide">
-                      <img src="./assets/img/photo1.jpg" alt="store Photo" />
-                    </div>
-                    <div class="spmItems swiper-slide">
-                      <img src="./assets/img/photo1.jpg" alt="store Photo" />
-                    </div>
-                    <div class="spmItems swiper-slide">
-                      <img src="./assets/img/photo1.jpg" alt="store Photo" />
-                    </div>
-                    <div class="spmItems swiper-slide">
-                      <img src="./assets/img/photo1.jpg" alt="store Photo" />
-                    </div>
+              <div class="mobileSlider bigarrow">
+                <div class="storePhotosMobile">
+                  <div class="spmItems">
+                    <img src="./assets/img/photo1.jpg" alt="store Photo" />
                   </div>
-                  <div class="swiper-scrollbar"></div>
+                  <div class="spmItems">
+                    <img src="./assets/img/photo1.jpg" alt="store Photo" />
+                  </div>
+                  <div class="spmItems">
+                    <img src="./assets/img/photo1.jpg" alt="store Photo" />
+                  </div>
+                  <div class="spmItems">
+                    <img src="./assets/img/photo1.jpg" alt="store Photo" />
+                  </div>
+                  <div class="spmItems">
+                    <img src="./assets/img/photo1.jpg" alt="store Photo" />
+                  </div>
                 </div>
               </div>
               <div class="storeAdress">
@@ -154,8 +154,8 @@
                 </li>
                 <li>
                   <a class="clock">
-                    <span>12noon - 9pm (Today)</span>
                     <i>Open Now</i>
+                    <span>12noon - 9pm (Today)</span>
                   </a>
                 </li>
                 <li>
@@ -215,96 +215,150 @@
               </h2>
               <a href="#" class="writeReviewBtn">Write a review </a>
             </div>
-            <div class="swiper">
-              <div class="swiper-container googleReviewSlide">
-                <div class="grList swiper-wrapper">
-                  <div class="grItem swiper-slide">
-                    <div class="giHead">
-                      <span class="giLeft">
-                        <h3>Masban Pereira</h3>
-                        <i>Posted on : 30/1/2022 11:09 AM</i>
-                      </span>
-                      <strong>4.6</strong>
-                    </div>
-                    <p>
-                      One of the best places to purchase your Lenovo product, be
-                      it a Laptop or Desktop. I was looking out for a Laptop to
-                      suit my needs of running heavy graphic and video editing
-                      software and the knowledgable staff guided me to the right
-                      product that fit my budget. I ended up buying the Lenovo
-                      Legion.
-                    </p>
+
+            <div class="googleReviewSlide">
+              <div class="grList">
+                <div class="grItem">
+                  <div class="giHead">
+                    <span class="giLeft">
+                      <h3>Masban Pereira</h3>
+                      <i>Posted on : 30/1/2022 11:09 AM</i>
+                    </span>
+                    <span class="starRating">4.5</span>
                   </div>
-                  <div class="grItem swiper-slide">
-                    <div class="giHead">
-                      <span class="giLeft">
-                        <h3>Masban Pereira</h3>
-                        <i>Posted on : 30/1/2022 11:09 AM</i>
-                      </span>
-                      <strong>4.6</strong>
-                    </div>
-                    <p>
-                      One of the best places to purchase your Lenovo product, be
-                      it a Laptop or Desktop. I was looking out for a Laptop
-                    </p>
-                  </div>
-                  <div class="grItem swiper-slide">
-                    <div class="giHead">
-                      <span class="giLeft">
-                        <h3>Masban Pereira</h3>
-                        <i>Posted on : 30/1/2022 11:09 AM</i>
-                      </span>
-                      <strong>4.6</strong>
-                    </div>
-                    <p>
-                      needs of running heavy graphic and video editing software
-                      and the knowledgable staff guided me to the right product
-                      that fit my budget. I ended up buying the Lenovo Legion.
-                    </p>
-                  </div>
-                  <div class="grItem swiper-slide">
-                    <div class="giHead">
-                      <span class="giLeft">
-                        <h3>Masban Pereira</h3>
-                        <i>Posted on : 30/1/2022 11:09 AM</i>
-                      </span>
-                      <strong>4.6</strong>
-                    </div>
-                    <p>my budget. I ended up buying the Lenovo Legion.</p>
-                  </div>
+                  <p>
+                    One of the best places to purchase your Lenovo product, be
+                    it a Laptop or Desktop. I was looking out for a Laptop to
+                    suit my needs of running heavy graphic and video editing
+                    software and the knowledgable staff guided me to the right
+                    product that fit my budget. I ended up buying the Lenovo
+                    Legion.
+                  </p>
                 </div>
-                <div class="swiper-scrollbar"></div>
+                <div class="grItem">
+                  <div class="giHead">
+                    <span class="giLeft">
+                      <h3>Masban Pereira</h3>
+                      <i>Posted on : 30/1/2022 11:09 AM</i>
+                    </span>
+                    <span class="starRating">4.5</span>
+                  </div>
+                  <p>
+                    One of the best places to purchase your Lenovo product, be
+                    it a Laptop or Desktop. I was looking out for a Laptop
+                  </p>
+                </div>
+                <div class="grItem">
+                  <div class="giHead">
+                    <span class="giLeft">
+                      <h3>Masban Pereira</h3>
+                      <i>Posted on : 30/1/2022 11:09 AM</i>
+                    </span>
+                    <span class="starRating">4.5</span>
+                  </div>
+                  <p>
+                    needs of running heavy graphic and video editing software
+                    and the knowledgable staff guided me to the right product
+                    that fit my budget. I ended up buying the Lenovo Legion.
+                  </p>
+                </div>
+                <div class="grItem">
+                  <div class="giHead">
+                    <span class="giLeft">
+                      <h3>Masban Pereira</h3>
+                      <i>Posted on : 30/1/2022 11:09 AM</i>
+                    </span>
+                    <span class="starRating">4.5</span>
+                  </div>
+                  <p>
+                    One of the best places to purchase your Lenovo product, be
+                    it a Laptop or Desktop. I was looking out for a Laptop to
+                    suit my needs of running heavy graphic and video editing
+                    software and the knowledgable staff guided me to the right
+                    product that fit my budget. I ended up buying the Lenovo
+                    Legion.
+                  </p>
+                </div>
+                <div class="grItem">
+                  <div class="giHead">
+                    <span class="giLeft">
+                      <h3>Masban Pereira</h3>
+                      <i>Posted on : 30/1/2022 11:09 AM</i>
+                    </span>
+                    <span class="starRating">4.5</span>
+                  </div>
+                  <p>
+                    One of the best places to purchase your Lenovo product, be
+                    it a Laptop or Desktop. I was looking out for a Laptop
+                  </p>
+                </div>
+                <div class="grItem">
+                  <div class="giHead">
+                    <span class="giLeft">
+                      <h3>Masban Pereira</h3>
+                      <i>Posted on : 30/1/2022 11:09 AM</i>
+                    </span>
+                    <span class="starRating">4.5</span>
+                  </div>
+                  <p>
+                    needs of running heavy graphic and video editing software
+                    and the knowledgable staff guided me to the right product
+                    that fit my budget. I ended up buying the Lenovo Legion.
+                  </p>
+                </div>
+                <div class="grItem">
+                  <div class="giHead">
+                    <span class="giLeft">
+                      <h3>Masban Pereira</h3>
+                      <i>Posted on : 30/1/2022 11:09 AM</i>
+                    </span>
+                    <span class="starRating">4.5</span>
+                  </div>
+                  <p>my budget. I ended up buying the Lenovo Legion.</p>
+                </div>
               </div>
+              <div class="swiper-scrollbar"></div>
             </div>
           </div>
           <div class="enqueryForm">
-            <h2 class="boldLIght towLineHead">
-              <b><span>Enquiry - Get a Call</span></b> Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.
-            </h2>
-            <ul class="efListwrap">
-              <li>
-                <span>
-                  <label>Name</label>
-                  <input type="text" placeholder="Enter Name" />
-                </span>
-              </li>
-              <li>
-                <span>
-                  <label>Email</label>
-                  <input type="text" placeholder="Enter Email" />
-                </span>
-              </li>
-              <li>
-                <span>
-                  <label>Mobile</label>
-                  <input type="text" placeholder="+91" />
-                </span>
-              </li>
-              <li>
-                <a href="#" class="gradientBtn">Submit</a>
-              </li>
-            </ul>
+            <div class="eqFwrap">
+              <h2 class="boldLIght towLineHead">
+                <b><span>Enquiry - Get a Call</span></b> Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit.
+              </h2>
+
+              <ul class="efListwrap">
+                <li>
+                  <span>
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter Name" />
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <label>Email</label>
+                    <input type="text" placeholder="Enter Email" />
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <label>Mobile</label>
+                    <input type="text" placeholder="+91" />
+                  </span>
+                </li>
+                <li>
+                  <a href="#" class="gradientBtn">Submit</a>
+                </li>
+              </ul>
+            </div>
+            <div class="thankYoumsg" style="display: none">
+              <h3>Thank You</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus
+                iaculis.
+              </p>
+              <a href="#" class="crossBtn"></a>
+            </div>
           </div>
           <div class="sotreListwrap">
             <h2 class="boldLIght towLineHead">
@@ -477,19 +531,19 @@
       <div class="container">
         <div class="poBox">
           <h2 class="boldLIght"><strong>New</strong> Products</h2>
-          <div class="swiper">
-            <div class="swiper-container newProduct">
-              <div class="poInnerBox swiper-wrapper">
-                <div class="poCardwrap swiper-slide">
+          <div class="">
+            <div class="newProduct bigarrow">
+              <div class="poInnerBox">
+                <div class="poCardwrap">
                   <img src="./assets/img/homeProd1.jpg" alt="" />
                   <span> Be Ready for your new Windows 11 PC </span>
                 </div>
-                <div class="poCardwrap swiper-slide">
-                  <img src="./assets/img/prod1.jpg" alt="" />
+                <div class="poCardwrap">
+                  <img src="./assets/img/prod2.jpg" alt="" />
                   <span> Windows 11 Gaming: DirectStorage </span>
                 </div>
-                <div class="poCardwrap swiper-slide">
-                  <img src="./assets/img/prod2.jpg" alt="" />
+                <div class="poCardwrap">
+                  <img src="./assets/img/prod1.jpg" alt="" />
                   <span> Understanding Blue Screen Error Codes </span>
                 </div>
               </div>
@@ -500,7 +554,7 @@
         <div class="poBox">
           <h2 class="boldLIght"><strong>Offers</strong></h2>
           <div class="swiper">
-            <div class="swiper-container newProduct">
+            <div class="swiper-container newProduct bigarrow">
               <div class="poInnerBox swiper-wrapper">
                 <div class="poCardwrap swiper-slide">
                   <img src="./assets/img/offerbanners.jpg" alt="" />
@@ -537,7 +591,7 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/js/slick.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

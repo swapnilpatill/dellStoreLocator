@@ -53,7 +53,16 @@
   margin-left: -0.5%;
   position: relative;
   @media (max-width: 1024px) {
-    flex-wrap: nowrap;
+    display: block;
+    margin: 0 -15px;
+    width: calc(100% + 30px);
+    padding: 0 40px;
+    .slick-slide {
+      padding: 10px;
+    }
+    .listingCard {
+      width: 300px;
+    }
   }
 }
 .listingCard {
@@ -68,6 +77,9 @@
   position: relative;
   transform: translateY(0px);
   transition: 0.2s;
+  .gradientBtn {
+    text-align: center;
+  }
   @media (max-width: 1024px) {
     width: 296px;
   }
@@ -146,14 +158,13 @@
   }
 }
 .starRating {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  color: #662a80;
+  color: #616161;
   position: relative;
   align-self: flex-start;
   padding-left: 25px;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   &:after {
@@ -164,7 +175,7 @@
     transform: translateY(-50%);
     width: 18px;
     height: 18px;
-    background: url(../img/yellowStar.svg) no-repeat;
+    background: url(../img/redStar.svg) no-repeat;
   }
 }
 .storeAdress {
@@ -202,18 +213,18 @@
       display: flex;
       justify-content: space-between;
       span {
-        font-weight: 500;
+        font-weight: 600;
         font-size: 14px;
         line-height: 16px;
 
-        color: #662a80;
+        color: #808080;
       }
       i {
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
         font-style: normal;
-        color: #e8b23d;
+        color: #662a80;
       }
     }
     a {
@@ -221,13 +232,13 @@
       font-size: 14px;
       line-height: 18px;
       text-decoration: none;
-      color: #444444;
+      color: #808080;
       padding: 14px 0;
       position: relative;
       width: 100%;
       transition: 0.3s;
       &:hover {
-        color: #e8b23d;
+        color: #662a80;
       }
       &:after {
         content: "";
@@ -266,7 +277,8 @@
         }
         i {
           font-style: normal;
-          color: #e8b23d;
+          color: #616161;
+          font-weight: bold;
         }
       }
     }

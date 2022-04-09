@@ -31,66 +31,153 @@ $(document).ready(function () {
     $(".navbar").toggleClass("showNavbar");
     $(".menuOverly").toggleClass("active");
   });
-  if ($("body").width() < 1024) {
-    var swiper = new Swiper(".slWrapper", {
-      slidesPerView: "auto",
-      spaceBetween: 15,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
+  $(".plList").slick({
+    infinite: false,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+
+          dots: true,
+        },
       },
-      mousewheel: {
-        enabled: true,
-        sensitivity: 5.5,
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+
+          dots: true,
+        },
       },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+
+          dots: true,
+        },
+      },
+    ],
+  });
+  $(".reviewSlider").slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: "false",
+  });
+  $(".grList").slick({
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          dots: true,
+        },
+      },
+    ],
+  });
+  if ($("body").width() < 701) {
+    $(".poInnerBox").slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+
+            dots: true,
+          },
+        },
+      ],
     });
-    var swiper = new Swiper(".newProduct", {
-      slidesPerView: "auto",
-      spaceBetween: 15,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
-      },
-      mousewheel: {
-        enabled: true,
-        sensitivity: 5.5,
-      },
+  }
+  if ($("body").width() < 768) {
+    $(".storePhotosMobile").slick({
+      infinite: false,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+
+            dots: true,
+          },
+        },
+      ],
     });
-    var swiper = new Swiper(".googleReviewSlide", {
-      slidesPerView: "auto",
-      spaceBetween: 15,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
-      },
-      mousewheel: {
-        enabled: true,
-        sensitivity: 5.5,
-      },
-    });
-    var swiper = new Swiper(".storePhotosMobile", {
-      slidesPerView: "auto",
-      spaceBetween: 15,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
-      },
-      mousewheel: {
-        enabled: true,
-        sensitivity: 5.5,
-      },
-    });
-    var swiper = new Swiper(".popularCityslider", {
-      slidesPerView: "auto",
-      spaceBetween: 5,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
-      },
-      mousewheel: {
-        enabled: true,
-        sensitivity: 5.5,
-      },
+  }
+  if ($("body").width() < 1025) {
+    $(".slListing").slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 660,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+
+            dots: true,
+          },
+        },
+      ],
     });
   }
 });

@@ -130,6 +130,7 @@ body {
       margin-left: 57px;
       li {
         display: inline-flex;
+
         &:first-child {
           display: none;
         }
@@ -139,6 +140,24 @@ body {
           font-size: 16px;
           padding: 35px 13px 16px;
           text-decoration: none;
+          position: relative;
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #fff;
+            content: "";
+            transform: scale(0, 1);
+            transition: 0.3s;
+            translate: 0.3s;
+          }
+          &:hover {
+            &:after {
+              transform: scale(1, 1);
+            }
+          }
         }
       }
     }
@@ -358,7 +377,6 @@ body {
   transition: 0.4s;
   &:hover {
     background-position: 100% 0;
-    border-radius: 15px 0px 15px 15px;
   }
 }
 .grayBtn {
@@ -371,12 +389,12 @@ body {
   transition: 0.4s;
   &:hover {
     background: #838383;
-    border-radius: 15px 0px 15px 15px;
+
     color: #fff;
   }
 }
 .yellowBtn {
-  background: #e8b23d;
+  background: #616161;
   border-radius: 15px 15px 15px 0px;
   padding: 13px 16px;
   color: #fff;
@@ -392,7 +410,6 @@ body {
     padding: 20px 52px;
     border-radius: 20px 20px 20px 0;
     &:hover {
-      border-radius: 20px 0px 20px 20px;
     }
     @media (max-width: 700px) {
       font-weight: 700;
@@ -403,7 +420,6 @@ body {
     }
   }
   &:hover {
-    border-radius: 15px 0px 15px 15px;
     color: #fff;
   }
 }
@@ -428,7 +444,7 @@ h1.pageHead {
   }
   strong {
     margin: 0 5px;
-    background: linear-gradient(262.84deg, #f2af00 14.11%, #03437a 87.33%);
+    background: linear-gradient(262.84deg, #b82d35 14.11%, #03437a 87.33%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -459,7 +475,7 @@ h1.pageHead {
       content: "";
       width: 28px;
       height: 28px;
-      background: #e8b23d url(../img/downArrow.svg) no-repeat center center;
+      background: #616161 url(../img/downArrow.svg) no-repeat center center;
       border-radius: 50%;
       margin-left: 5px;
     }
@@ -489,7 +505,7 @@ h1.pageHead {
       content: "";
       width: 28px;
       height: 28px;
-      background: #e8b23d url(../img/downArrow.svg) no-repeat center center;
+      background: #616161 url(../img/downArrow.svg) no-repeat center center;
       border-radius: 50%;
       margin-right: 5px;
       transform: rotate(90deg);
@@ -517,6 +533,7 @@ h2.boldLIght {
   padding-bottom: 14px;
   position: relative;
   min-width: 280px;
+  color: #000;
   @media (max-width: 700px) {
     font-size: 21px;
     line-height: 25px;
@@ -526,6 +543,7 @@ h2.boldLIght {
   }
   &.towLineHead {
     flex-direction: column;
+    color: #808080;
   }
   &::after {
     content: "";
@@ -544,7 +562,7 @@ h2.boldLIght {
     display: block;
     position: relative;
     span {
-      background: linear-gradient(262.84deg, #f2af00 14.11%, #03437a 87.33%);
+      background: linear-gradient(262.84deg, #b82d35 14.11%, #03437a 87.33%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
@@ -624,5 +642,89 @@ h2.boldLIght {
   width: 296px;
   img {
     width: 100%;
+  }
+}
+
+.slick-slider {
+  margin-bottom: 20px;
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+
+  > li {
+    width: auto !important;
+    padding: 0 5px;
+    button {
+      text-indent: -99999px;
+      overflow: hidden;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background: #000;
+      border: 0 !important;
+      transition: 0.3s;
+      outline: 0 !important;
+    }
+    &.slick-active {
+      button {
+        width: 33px;
+      }
+    }
+  }
+}
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+
+  background: #000;
+  background: url(../img/rightFullArrow.svg) no-repeat;
+  border: 0;
+  text-indent: -99999px;
+  font-size: 0;
+  z-index: 1;
+  &.slick-disabled {
+    opacity: 0.5;
+  }
+  &.slick-prev {
+    left: 10px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &.slick-next {
+    right: 10px;
+  }
+}
+
+.bigarrow {
+  .slick-arrow {
+    width: 31px;
+    height: 61px;
+    background: url(../img/arrowBig.svg) no-repeat;
+    &:before {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      height: 49px;
+      width: 3px;
+      background: #fff;
+      box-shadow: 3px 0 2px 0px rgba(0, 0, 0, 0.25);
+      content: "";
+    }
+  }
+}
+.slListing.bigarrow {
+  .slick-arrow.slick-prev {
+    left: 0;
+  }
+  .slick-arrow.slick-next {
+    right: 0;
   }
 }
